@@ -1,0 +1,19 @@
+﻿@model FolderCatalog.Models.FolderViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Folder Catalog</title>
+</head>
+<body>
+    <h2>"Folder" - @Model.MainFolder.FolderName</h2>
+
+    @foreach (var subfolder in Model.Subfolders)
+    {
+        <p>
+            <a href="https://localhost:7777/@subfolder.Id">@subfolder.FolderName</a>
+        </p>
+    }
+</body>
+</html>
